@@ -16,10 +16,10 @@ const Copyright = styled.p`
 `;
 
 const Footer = ({ big, medium }) => (
-  <FooterWrapper {...big && { big }} {...medium && { medium }}>
+  <FooterWrapper {...(big && { big })} {...(medium && { medium })}>
     <Content>
       <Copyright white align="center">
-        © Name Surname 2019. All rights reserved.
+        © Dan Winslow 2020. All rights reserved.
       </Copyright>
     </Content>
   </FooterWrapper>

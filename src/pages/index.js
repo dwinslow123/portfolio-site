@@ -4,6 +4,8 @@ import * as Mixins from '../Mixins';
 import * as t from '../Typography';
 import Layout, { Content } from '../components/Layout';
 import Placeholder from '../images/placeholder.png';
+import kanban from '../images/kanban.png';
+import villa from '../images/villa.png';
 import { HireMe, LinkButton } from '../components/Button.js';
 import HireMePopup from '../components/HireMePopup.js';
 import { media } from '../MediaQueries';
@@ -103,8 +105,7 @@ const HomepageWrapper = styled.div`
 const WorkWithMe = styled.div`
   padding: 80px;
   width: 73%;
-  border-radius: 6px;
-  box-shadow: 0 2px 26px 0 rgba(57, 55, 55, 0.08);
+  box-shadow: 5px 10px 10px rgba(57, 55, 55, 0.08);
   background-color: #ffffff;
   text-align: center;
   position: relative;
@@ -144,24 +145,19 @@ class Homepage extends React.Component {
       <HomepageWrapper>
         <Layout theme="white" bigFooter openContactPopup={this.openContactPopup}>
           <AboveFold>
-            <Img fluid={data.avatarHomepage.childImageSharp.fluid} alt="Name Surname" className="avatar" />
+            <Img fluid={data.avatarHomepage.childImageSharp.fluid} alt="Dan Winslow" className="avatar" />
             <t.H1 primary align="center">
-              Name Surname
+              Dan Winslow
             </t.H1>
             <t.LargeP align="center" max45>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              A web developer based in the Chicagoland area, with a focus on JavaScript, React, Node.js, Redux, and
+              Express.
             </t.LargeP>
             <HireMe large onClick={this.openContactPopup} book>
               Hire me
             </HireMe>
           </AboveFold>
           <Content>
-            <t.H2 primary align="center" bold>
-              Lorem ipsum
-            </t.H2>
-            <t.P align="center" max70 className="who-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </t.P>
             <t.H2 primary align="center" bold className="portfolio">
               Portfolio
             </t.H2>
@@ -169,15 +165,52 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
+                <ItemImage src={kanban} alt="Kanban Board" />
+              </DivWrapper>
+              <DivWrapper>
+                <t.H2 bold>Kanban Board</t.H2>
+                <t.P>
+                  A kanban board, allowing a user to add a task and move it between columns. Built using React with Sass
+                  for styling. Also utilizes local storage for users tasks to remain if window is closed.
+                </t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://dwinslow123.github.io/kanban/"
+                >
+                  See it live
+                </LinkButton>
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <t.H2 bold>Villa Originals</t.H2>
+                <t.P>Freelance project, customer owned</t.P>
+                <t.P>A local hair salon, redesigned website using React and Sass for styling.</t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="http://www.villaoriginals.com">
+                  www.villaoriginals.com
+                </LinkButton>
+              </DivWrapper>
+              <DivWrapper>
+                <ItemImage src={villa.png} alt="Villa Originals" />
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
                 <ItemImage src={Placeholder} alt="Placeholder title" />
               </DivWrapper>
               <DivWrapper>
                 <t.H2 bold>Placeholder website</t.H2>
                 <t.P>Lorem ipsum</t.P>
                 <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
+                <LinkButton primary bold className="link" as="a" target="_blank" href="#">
                   Lorem ipsum
                 </LinkButton>
               </DivWrapper>
@@ -189,43 +222,7 @@ class Homepage extends React.Component {
                 <t.H2 bold>Placeholder website</t.H2>
                 <t.P>Lorem ipsum</t.P>
                 <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
-                </LinkButton>
-              </DivWrapper>
-              <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
-              </DivWrapper>
-            </BlockContent>
-          </Block>
-          <Block>
-            <BlockContent>
-              <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
-              </DivWrapper>
-              <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
-                </LinkButton>
-              </DivWrapper>
-            </BlockContent>
-          </Block>
-          <Block>
-            <BlockContent>
-              <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
+                <LinkButton primary bold className="link" as="a" target="_blank" href="#">
                   Lorem ipsum
                 </LinkButton>
               </DivWrapper>
@@ -236,9 +233,7 @@ class Homepage extends React.Component {
           </Block>
           <WorkWithMe>
             <t.H1 green>Get in touch with me</t.H1>
-            <t.LargeP>
-              Fancy working with me? Contact me for more info!{' '}
-            </t.LargeP>
+            <t.LargeP>Fancy working with me? Contact me for more info! </t.LargeP>
             <HireMe onClick={this.openContactPopup} book>
               Contact me
             </HireMe>
