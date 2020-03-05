@@ -86,15 +86,18 @@ class HireMePopup extends React.Component {
           <Burger onClick={this.closePopup}>
             <img alt="Close popup" src={Close} />
           </Burger>
-          <t.H3>Contact me</t.H3>
-          <Link primary bold target="_blank" href="https://www.linkedin.com/">
-            <img src={LN} alt="Your Linkedin profile" />
+          <t.H3>Reach me at:</t.H3>
+          <Link primary bold target="_blank" href="https://www.linkedin.com/dwinslow123">
+            <t.P>https://linkedin.com/dwinslow123</t.P>
           </Link>
-          <Link primary bold href="tel:13312519841">
-            Call my cell.
+          <Link primary bold href="tel:13312519841" as="a">
+            <t.P>(331) 251-9841</t.P>
           </Link>
           <Link primary bold href="mailto:dwinslow123@me.com">
-            Dwinslow123@me.com
+            <t.P>Dwinslow123@me.com</t.P>
+          </Link>
+          <Link primary bold href="https://github.com/dwinslow123">
+            <t.P>https://github.com/dwinslow123</t.P>
           </Link>
         </ContentWrapper>
       </HireMePopupWrapper>

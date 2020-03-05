@@ -6,6 +6,8 @@ import Layout, { Content } from '../components/Layout';
 import Placeholder from '../images/placeholder.png';
 import kanban from '../images/kanban.png';
 import villa from '../images/villa.png';
+import plants from '../images/water-plants.png';
+import wtd from '../images/wtd.png';
 import { HireMe, LinkButton } from '../components/Button.js';
 import HireMePopup from '../components/HireMePopup.js';
 import { media } from '../MediaQueries';
@@ -105,7 +107,7 @@ const HomepageWrapper = styled.div`
 const WorkWithMe = styled.div`
   padding: 80px;
   width: 73%;
-  box-shadow: 5px 10px 10px rgba(57, 55, 55, 0.08);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   text-align: center;
   position: relative;
@@ -197,21 +199,30 @@ class Homepage extends React.Component {
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={villa.png} alt="Villa Originals" />
+                <ItemImage src={villa} alt="Villa Originals" />
               </DivWrapper>
             </BlockContent>
           </Block>
           <Block>
             <BlockContent>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={wtd} alt="What to do in Naperville" />
               </DivWrapper>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a" target="_blank" href="#">
-                  Lorem ipsum
+                <t.H2 bold>What to do in Naperville</t.H2>
+                <t.P>
+                  Search page built using React. Utilizes an express server to search the Yelp API to help locate things
+                  to do in Naperville IL.
+                </t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://plaidypus-intro.herokuapp.com/"
+                >
+                  See it live
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -219,21 +230,30 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a" target="_blank" href="#">
-                  Lorem ipsum
+                <t.H2 bold>Water Your Plants</t.H2>
+                <t.P>
+                  A React app, parsing JSON data and utilizing the date method to determine if a plant needs to be
+                  watered on that particular date.
+                </t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://dwinslow123.github.io/water_plants"
+                >
+                  See it live
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={plants} alt="water your plants" />
               </DivWrapper>
             </BlockContent>
           </Block>
           <WorkWithMe>
             <t.H1 green>Get in touch with me</t.H1>
-            <t.LargeP>Fancy working with me? Contact me for more info! </t.LargeP>
+            <t.LargeP>Interested in working with me? Contact me for more info! </t.LargeP>
             <HireMe onClick={this.openContactPopup} book>
               Contact me
             </HireMe>
