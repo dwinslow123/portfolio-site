@@ -87,7 +87,7 @@ class AboutMe extends React.Component {
               Dan Winslow - Web Developer
             </t.H1>
             <t.LargeP align="center" max70>
-              I'm currently working as a Front End Web Developer for Preferred Hotels and Resorts. Before working with
+              I was recently working as a Front End Web Developer for Preferred Hotels and Resorts. Before working with
               Preferred, I attended Lambda School which is an eight month CS and software development program. In that
               we completed all curiculum course work including: React, Redux, Node, Express, MongoDB, Mocha, and Chai.
               When I'm not working I enjoy tinkering with side projects and continuing to learn.

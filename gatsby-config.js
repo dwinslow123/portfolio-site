@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Dan Winslow - Portfolio',
-    pathPrefix: '/portfolio-site'
+    title: 'Dan Winslow - Portfolio'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
