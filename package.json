@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.40",
+    "gatsby-cli": "^2.12.75",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.7",
     "gatsby-plugin-offline": "^2.0.12",

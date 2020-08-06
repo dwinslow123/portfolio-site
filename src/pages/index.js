@@ -1,20 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
-import * as Mixins from '../Mixins';
-import * as t from '../Typography';
-import Layout, { Content } from '../components/Layout';
-import Placeholder from '../images/placeholder.png';
-import kanban from '../images/kanban.png';
-import villa from '../images/villa.png';
-import plants from '../images/water-plants.png';
-import wtd from '../images/wtd.png';
-import { HireMe, LinkButton } from '../components/Button.js';
-import HireMePopup from '../components/HireMePopup.js';
-import { media } from '../MediaQueries';
-import Colors from '../Colors';
-import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
-import { darken } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import * as Mixins from "../Mixins";
+import * as t from "../Typography";
+import Layout, { Content } from "../components/Layout";
+import Placeholder from "../images/placeholder.png";
+import kanban from "../images/kanban.png";
+import villa from "../images/villa.png";
+import plants from "../images/water-plants.png";
+import { HireMe, LinkButton } from "../components/Button.js";
+import HireMePopup from "../components/HireMePopup.js";
+import { media } from "../MediaQueries";
+import Colors from "../Colors";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
+import { darken } from "polished";
 
 const AboveFold = styled.div`
   ${Mixins.aboveFoldMixin}
@@ -145,15 +144,23 @@ class Homepage extends React.Component {
     const { data } = this.props;
     return (
       <HomepageWrapper>
-        <Layout theme="white" bigFooter openContactPopup={this.openContactPopup}>
+        <Layout
+          theme="white"
+          bigFooter
+          openContactPopup={this.openContactPopup}
+        >
           <AboveFold>
-            <Img fluid={data.avatarHomepage.childImageSharp.fluid} alt="Dan Winslow" className="avatar" />
+            <Img
+              fluid={data.avatarHomepage.childImageSharp.fluid}
+              alt="Dan Winslow"
+              className="avatar"
+            />
             <t.H1 primary align="center">
               Dan Winslow
             </t.H1>
             <t.LargeP align="center" max45>
-              A web developer based in the Chicagoland area, with a focus on JavaScript, React, Node.js, Redux, and
-              Express.
+              A web developer based in the Chicagoland area, with a focus on
+              JavaScript, React, Node.js, Redux, and Express.
             </t.LargeP>
             <HireMe large onClick={this.openContactPopup} book>
               Hire me
@@ -172,8 +179,10 @@ class Homepage extends React.Component {
               <DivWrapper>
                 <t.H2 bold>Kanban Board</t.H2>
                 <t.P>
-                  A kanban board, allowing a user to add a task and move it between columns. Built using React with Sass
-                  for styling. Also utilizes local storage for users tasks to remain if window is closed.
+                  A kanban board, allowing a user to add a task and move it
+                  between columns. Built using React with Sass for styling. Also
+                  utilizes local storage for users tasks to remain if window is
+                  closed.
                 </t.P>
                 <LinkButton
                   primary
@@ -193,8 +202,18 @@ class Homepage extends React.Component {
               <DivWrapper>
                 <t.H2 bold>Villa Originals</t.H2>
                 <t.P>Freelance project, customer owned</t.P>
-                <t.P>A local hair salon, redesigned website using React and Sass for styling.</t.P>
-                <LinkButton primary bold className="link" as="a" target="_blank" href="http://www.villaoriginals.com">
+                <t.P>
+                  A local hair salon, redesigned website using React and Sass
+                  for styling.
+                </t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="http://www.villaoriginals.com"
+                >
                   www.villaoriginals.com
                 </LinkButton>
               </DivWrapper>
@@ -206,34 +225,11 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <ItemImage src={wtd} alt="What to do in Naperville" />
-              </DivWrapper>
-              <DivWrapper>
-                <t.H2 bold>What to do in Naperville</t.H2>
-                <t.P>
-                  Search page built using React. Utilizes an express server to search the Yelp API to help locate things
-                  to do in Naperville IL.
-                </t.P>
-                <LinkButton
-                  primary
-                  bold
-                  className="link"
-                  as="a"
-                  target="_blank"
-                  href="https://plaidypus-intro.herokuapp.com/"
-                >
-                  See it live
-                </LinkButton>
-              </DivWrapper>
-            </BlockContent>
-          </Block>
-          <Block>
-            <BlockContent>
-              <DivWrapper>
                 <t.H2 bold>Water Your Plants</t.H2>
                 <t.P>
-                  A React app, parsing JSON data and utilizing the date method to determine if a plant needs to be
-                  watered on that particular date.
+                  A React app, parsing JSON data and utilizing the date method
+                  to determine if a plant needs to be watered on that particular
+                  date.
                 </t.P>
                 <LinkButton
                   primary
@@ -253,13 +249,18 @@ class Homepage extends React.Component {
           </Block>
           <WorkWithMe>
             <t.H1 green>Get in touch with me</t.H1>
-            <t.LargeP>Interested in working with me? Contact me for more info! </t.LargeP>
+            <t.LargeP>
+              Interested in working with me? Contact me for more info!{" "}
+            </t.LargeP>
             <HireMe onClick={this.openContactPopup} book>
               Contact me
             </HireMe>
           </WorkWithMe>
         </Layout>
-        <HireMePopup open={openHireMePopup} handleClose={this.handleRequestDemoClose} />
+        <HireMePopup
+          open={openHireMePopup}
+          handleClose={this.handleRequestDemoClose}
+        />
       </HomepageWrapper>
     );
   }
