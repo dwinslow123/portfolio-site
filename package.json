@@ -2,7 +2,6 @@
   "name": "portfolio-website-gatsby",
   "description": "Portfolio website built in Gatsby",
   "version": "1.0.0",
-  "author": "Milos Lekovic <milos085@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.40",
@@ -38,13 +37,13 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master"
   },
   "devDependencies": {
     "prettier": "^1.15.1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "type": "git"
   }
 }
